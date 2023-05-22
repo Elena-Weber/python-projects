@@ -1,4 +1,5 @@
-from replit import clear # this only works in replit
+# clear only works in replit
+from replit import clear
 import random
 from hangman_words import word_list
 from hangman_art import logo, stages
