@@ -20,11 +20,20 @@ def caesar(start_text, shift_amount, cipher_direction):
 
 while not should_end:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
-    shift = shift % 26
-    caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
-    restart = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
-    if restart == "no":
-        should_end = True
-        print("Goodbye")
+    if direction == 'encode' or direction == 'decode':
+        text = input("Heads up! Only letters are allowed. Type your word to process, no spaces:\n").lower()
+        if len(text) >= 1 and text.isalpha():
+            shift = input("Type the shift number to encode and decode with:\n")
+            if shift.isnumeric():
+                shift = int(shift) % 26
+                caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
+                restart = input("\nType 'yes' if you want to re-run. Type 'no' to exit.\n")
+                if restart == "no":
+                    should_end = True
+                    print("Thanks for playing!")
+            else:
+                print('Oh no! Let us try again!')
+        else:
+            print('Wrong! Let us start all over again!')
+    else:
+        print('Oops! Please try again!')
