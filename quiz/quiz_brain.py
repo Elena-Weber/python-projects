@@ -14,9 +14,7 @@ class QuizBrain:
         self.current_question = self.questions_list[self.question_number]
         self.question_number += 1
         question_text = html.unescape(self.current_question.text)
-        return f"Q.{self.question_number}: {question_text}"
-        # user_answer = input(f"Q.{self.question_number}: {question_text} (True/False): ")
-        # self.check_answer(user_answer, self.current_question.answer)
+        return f"{self.question_number}: {question_text}"
 
     def check_answer(self, user_answer):
         correct_answer = self.current_question.answer
@@ -25,5 +23,3 @@ class QuizBrain:
             return True
         else:
             return False
-        print(f"You answered {self.score} question(s) correctly out of {self.question_number}")
-        print("\n")
