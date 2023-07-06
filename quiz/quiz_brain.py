@@ -22,8 +22,8 @@ class QuizBrain:
         correct_answer = self.current_question.answer
         if user_answer.lower() == correct_answer.lower():
             self.score += 1
-            print("Correct!")
+            return True
         else:
-            print("Oops! That's wrong.")
+            return False
         print(f"You answered {self.score} question(s) correctly out of {self.question_number}")
         print("\n")
