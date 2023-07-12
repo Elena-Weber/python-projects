@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="static/style.css">
   </head>
   <body>
-    <h1>Names App with Flask</h1>
-    <h2>Type / followed by your name in the browser search bar and hit "Enter"</h2>
-    <h3>Example: /elena</h3>
+    <h1>Here's your result:</h1>
+    <h2>Hey {{ name.title() }}!</h2>
+    <h2>There's a high probability you're {{ gender }}.</h2>
+    <h2>Your name was popular in the USA around {{ years_ago }} years ago.</h2>
   </body>
 </html>

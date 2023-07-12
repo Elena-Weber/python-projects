@@ -2,3 +2,8 @@ To run the app after cloning, cd into the folder with it and type these in your 
 
 export FLASK_APP=server.py
 flask run --debug
+
+The following APIs were used:
+
+https://agify.io/
+https://genderize.io/
