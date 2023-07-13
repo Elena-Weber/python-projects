@@ -1,5 +1,5 @@
 body {
-  /* background-color: beige; */
+  color: #6528F7;
 }
 
 .container {
@@ -9,6 +9,7 @@ body {
 
 .title {
   margin: 100px 0;
+  text-decoration: underline;
 }
 
 .instructions {
@@ -16,10 +17,15 @@ body {
 }
 
 span {
-  background-color: red;
+  background-color: #EDE4FF;
 }
 
 img {
   width: 40%;
   margin-top: 30px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
 }

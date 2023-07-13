@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Names with Flask</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="static/style.css">
   </head>
   <body>
     <div class="container">
-      <h1>Here's your result:</h1>
-      <h2>Hey {{ name.title() }}!</h2>
-      <h2>There's a high probability you're {{ gender }}.</h2>
-      <h2>Your name was popular in the USA around {{ years_ago }} years ago.</h2>
+      <h1 class="title">Here's your result:</h1>
+      <h2 class="my-5">Hey <span>{{ name.title() }}</span>!</h2>
+      <h2>There's a high probability you're <span>{{ gender }}</span>.</h2>
+      <h2 class="mt-5">Your name was popular in the USA around <span>{{ years_ago }} years ago</span>.</h2>
     </div>
   </body>
 </html>
