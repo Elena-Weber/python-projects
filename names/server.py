@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 import requests
-import datetime
 
 app = Flask(__name__)
 
@@ -20,7 +19,10 @@ def get_name(name):
     genderize_data = genderize_response.json()
     gender = genderize_data["gender"]
 
-    return render_template('name.html', name=name, years_ago=years_ago, gender=gender)
+    if type(years_ago) == int:
+        return render_template('name.html', name=name, years_ago=years_ago, gender=gender)
+    else:
+        return render_template('404.html')
 
 if __name__ == "__main__":
     app.run()
