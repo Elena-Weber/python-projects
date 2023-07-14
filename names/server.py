@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import requests
 
 app = Flask(__name__)
@@ -23,6 +23,15 @@ def get_name(name):
         return render_template('name.html', name=name, years_ago=years_ago, gender=gender)
     else:
         return render_template('404.html')
+
+@app.route("/feedback", methods=["GET", "POST"])
+def feedback():
+    if request.method == "POST":
+        data = request.form
+        print(data["name"])
+        print(data["feedback"])
+        return render_template('feedback.html', msg_sent=True)
+    return render_template('feedback.html', msg_sent=False)
 
 if __name__ == "__main__":
     app.run()

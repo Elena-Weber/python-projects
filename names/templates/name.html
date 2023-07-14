@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="static/style.css">
   </head>
   <body>
-    <div class="container">
+    <div class="main">
       <h1 class="title">Here's your result:</h1>
-      <h2 class="my-5">Hey <span>{{ name.title() }}</span>!</h2>
+      <h2 class="my-3">Hey <span>{{ name.title() }}</span>!</h2>
       <h2>There's a high probability you're <span>{{ gender }}</span>.</h2>
-      <h2 class="mt-5">Your name was popular in the USA around <span>{{ years_ago }} years ago</span>.</h2>
+      <h2 class="mt-3">Your name was popular in the USA around <span>{{ years_ago }} years ago</span>.</h2>
+      <a class="btn btn-primary my-5 px-3 text-uppercase feedback-btn" href="{{ url_for('feedback') }}">Provide feedback on the result</a>
     </div>
     <div>
       {% include "footer.html" %}
